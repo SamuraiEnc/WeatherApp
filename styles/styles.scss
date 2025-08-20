@@ -1,0 +1,203 @@
+@use 'mixins' as mix;
+@use 'colors' as col;
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+html{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+
+    .body{
+        background: col.$day;
+        color: col.$text-color;
+        min-height: 100vh;
+        overflow: hidden;
+        transition: all 0.4s ease;
+
+        //default themes
+        &--day{
+            background: col.$day;
+        }
+
+        &--nigth{
+            background: col.$nigth;
+        }
+
+        &--sun-set{
+            background: col.$sun-set;
+        }
+
+        &--nigth-deep{
+            background: col.$nigth-deep;
+        }
+
+        &--sun-rise{
+            background: col.$sun-rise;
+        }
+
+        //cloudy
+        &--day-cloudy{
+            background: col.$day-cloudy;
+        }
+
+        &--nigth-cloudy{
+            background: col.$nigth-cloudy;
+        }
+
+        &--sun-set-cloudy{
+            background: col.$sun-set-cloudy;
+        }
+
+        &--nigth-deep-cloudy{
+            background: col.$nigth-deep-cloudy;
+        }
+
+        &--sun-rise-cloudy{
+            background: col.$sun-rise-cloudy;
+        }
+
+        //rainy
+        &--day-rainy{
+            background: col.$day-rainy;
+        }
+
+        &--nigth-rainy{
+            background: col.$nigth-rainy;
+        }
+
+        &--sun-set-rainy{
+            background: col.$sun-set-rainy;
+        }
+
+        &--nigth-deep-rainy{
+            background: col.$nigth-deep-rainy;
+        }
+
+        &--sun-rise-rainy{
+            background: col.$sun-rise-rainy;
+        }
+        
+        .header{
+            @include mix.display();
+            width: 100%;
+
+            &__container{
+                @include mix.display();
+                @include mix.containers;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            &__temp{
+                font-size: 64px;
+                margin: 0;
+                margin-top: 170px;
+            }
+
+        }
+
+        .main{
+            width: 100%;
+            @include mix.display();
+
+            &__container{
+                @include mix.display();
+                @include mix.containers;
+                flex-direction: column;
+
+                .apparent__temp{
+                    @include mix.cards-color();
+                    padding: 5px 10px;
+                }
+            }
+
+            .cards__container{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 50px;
+
+                .card{
+                    &__wind{
+                        @include mix.cards();
+
+                        .wind{
+                            &__speed{
+                                @include mix.cards-text();
+                                font-size: 24px;
+                            }
+
+                            &__container{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-top: auto;
+                                align-items: center;
+                            }
+
+                            &__direction{
+                                @include mix.cards-text();
+                                font-size: 48px;
+                            }
+
+                            &__arrow{
+                                @include mix.cards-text();
+                                font-size: 48px;
+                            }
+                        }
+                    }
+
+                    &__rain{
+                        @include mix.cards();
+
+                        .rain{
+                            &__title{
+                                @include mix.cards-text();
+                                font-size: 16px;
+                            }
+
+                            &__percent{
+                                @include mix.cards-text();
+                                font-size: 48px;
+                                margin-top: auto;
+                            }
+                        }
+                    }
+
+                    &__cloudy{
+                        @include mix.cards();
+
+                        .cloudy{
+                            &__title{
+                                @include mix.cards-text();
+                                font-size: 16px;
+                            }
+
+                            &__percent{
+                                @include mix.cards-text();
+                                font-size: 48px;
+                                margin-top: auto;
+                            }
+                        }
+                    }
+
+                    &__day{
+                        @include mix.cards();
+
+                        .day{
+                            &__sun-rise{
+                                @include mix.cards-text();
+                                font-size: 20px;
+                            }
+
+                            &__sun-set{
+                                @include mix.cards-text();
+                                margin-top: auto;
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

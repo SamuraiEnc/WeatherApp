@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Weather Forecast</title>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header__container">
+            <h3 class="header__city">...</h3>
+            <h1 class="header__temp">...</h1>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__container">
+            <p class="apparent__temp"></p>
+            <div class="cards__container">
+                <div class="card__wind">
+                    <p class="wind__speed"></p>
+                    <div class="wind__container">
+                        <p class="wind__direction"></p>
+                        <p class="wind__arrow"></p>
+                    </div>
+                </div>
+                <div class="card__rain">
+                    <p class="rain__title">Вероятность дождя:</p>
+                    <p class="rain__percent"></p>
+                </div>
+                <div class="card__cloudy">
+                    <p class="cloudy__title">Облачность:</p>
+                    <p class="cloudy__percent"></p>
+                </div>
+                <div class="card__day">
+                    <p class="day__sun-rise"></p>
+                    <p class="day__sun-set"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="../scripts/script.js"></script>
+</html>

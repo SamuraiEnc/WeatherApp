@@ -1,0 +1,30 @@
+@use 'colors' as col;
+
+@mixin display($just-cont: center, $align-item: center){
+    display: flex;
+    justify-content: $just-cont;
+    align-items: $align-item;
+}
+
+@mixin containers{
+    width: 800px;
+}
+
+@mixin cards-color($border-rad: 5px){
+    background-color: col.$bg-card;
+    border-radius: $border-rad;
+}
+
+@mixin cards($border-rad: 10px){
+    background-color: col.$bg-card;
+    border-radius: $border-rad;
+    height: 125px;
+    width: 175px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin cards-text(){
+    margin: 0;
+}
